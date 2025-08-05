@@ -14,21 +14,19 @@ import java.util.UUID;
 @Mapper(componentModel = "spring", imports = { UUID.class })
 public interface ProductMapper {
 
-    @Mapping(target = "apresentation", source = "description")
-    @Mapping(target = "brand.name", source = "brand")
-    @Mapping(target = "brand.id", expression = "java(UUID.randomUUID().toString())")
-    @Mapping(target = "category", source = "category", qualifiedByName = "toCategory")
-    @Mapping(target = "barCode", ignore = true)
-    Product toEntity(ProductDTO productDTO);
+	@Mapping(target = "apresentation", source = "description")
+	@Mapping(target = "brand.name", source = "brand")
+	@Mapping(target = "brand.id", expression = "java(UUID.randomUUID().toString())")
+	@Mapping(target = "category", source = "category", qualifiedByName = "toCategory")
+	@Mapping(target = "barCode", ignore = true)
+	Product toEntity(ProductDTO productDTO);
 
-    @InheritConfiguration
-    List<Product> toEntity(List<ProductDTO> productDTOs);
+	@InheritConfiguration
+	List<Product> toEntity(List<ProductDTO> productDTOs);
 
-    @Named("toCategory")
-    default Category toCategory(String name) {
-        return Category.builder()
-                .name(name)
-                .build();
-    }
+	@Named("toCategory")
+	default Category toCategory(String name) {
+		return Category.builder().name(name).build();
+	}
 
 }

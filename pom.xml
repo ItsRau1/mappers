@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.poc</groupId>
 	<artifactId>mappers</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>mapstruct</name>
-	<description>POC for Mapstruct lib</description>
+	<description>POC for mappers lib</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -82,6 +82,20 @@
 						</exclude>
 					</excludes>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>io.spring.javaformat</groupId>
+				<artifactId>spring-javaformat-maven-plugin</artifactId>
+				<version>0.0.47</version>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<inherited>true</inherited>
+						<goals>
+							<goal>validate</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

@@ -8,7 +8,7 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring", uses = { ProductMapper.class })
 public interface PurchaseMapper {
 
-    @Mapping(target = "products", source = "products", qualifiedByName = "toEntity")
-    Purchase toEntity(PurchaseDTO purchaseDTO);
+	@Mapping(target = "products", source = "products", qualifiedByName = "toEntity")
+	Purchase toEntity(PurchaseDTO purchaseDTO);
 
 }

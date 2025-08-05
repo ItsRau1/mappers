@@ -7,6 +7,6 @@ import java.util.List;
 @Data
 public class PurchaseDTO {
 
-    private List<ProductDTO> products;
+	private List<ProductDTO> products;
 
 }

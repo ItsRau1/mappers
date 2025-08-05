@@ -9,9 +9,9 @@ import java.util.UUID;
 @Builder
 public class Category {
 
-    @Builder.Default
-    private String id = UUID.randomUUID().toString();
+	@Builder.Default
+	private String id = UUID.randomUUID().toString();
 
-    private String name;
+	private String name;
 
 }

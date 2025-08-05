@@ -6,10 +6,10 @@ import java.util.List;
 
 public class Purchase {
 
-    private List<Product> products;
+	private List<Product> products;
 
-    private BigDecimal amount;
+	private BigDecimal amount;
 
-    private LocalDateTime date;
+	private LocalDateTime date;
 
 }
